@@ -3,8 +3,7 @@ pub mod rest;
 pub mod ws;
 
 #[cfg(test)]
-mod tests {
-    use std::collections::HashMap;
+mod tests {    use std::collections::HashMap;
     use crate::rest::{account, Client};
 
     #[tokio::test]

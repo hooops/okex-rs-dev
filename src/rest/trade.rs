@@ -5,9 +5,9 @@ use crate::utils::parse_params_to_str;
 
 pub async fn order(
     client: &mut Client,
-    order: Order
+    body: String
 ) -> anyhow::Result<String> {
-    let body = serde_json::to_string(&order)?;
+    // let body = serde_json::to_string(&order)?;
     let response = client.post_req("POST", "/api/v5/trade/order", body).await?;
 
     Ok(response)
